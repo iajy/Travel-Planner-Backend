@@ -19,7 +19,7 @@ import com.travelplanner.dto.TripRequest;
 @CrossOrigin(origins = "https://travel-planner-frontend-flax.vercel.app")
 public class TravelController {
 
-    @Value("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")          //
+	@Value("${OPENROUTER_API_KEY}")
     private String apiKey;
 
     @PostMapping("/generate-itinerary")
