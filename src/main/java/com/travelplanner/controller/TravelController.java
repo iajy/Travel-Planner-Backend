@@ -43,7 +43,7 @@ public class TravelController {
                     .uri(URI.create("https://openrouter.ai/api/v1/chat/completions"))
                     .header("Authorization", "Bearer " + apiKey)
                     .header("Content-Type", "application/json")
-                    .header("HTTP-Referer", "http://localhost:5173")
+                    .header("HTTP-Referer", "https://travel-planner-frontend-flax.vercel.app/")
                     .header("X-Title", "AI Trip Planner")
                     .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                     .build();
