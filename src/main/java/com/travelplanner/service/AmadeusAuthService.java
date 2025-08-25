@@ -10,8 +10,8 @@ import java.time.Instant;
 @Service
 public class AmadeusAuthService {
 
-  private final String API_KEY = System.getenv("api_key");
-  private final String API_SECRET = System.getenv("api_secret");
+  private final String API_KEY = "${AMADEUS_KEY}";          //System.getenv("api_key");
+  private final String API_SECRET = "${AMADEUS_SECRET}";   //System.getenv("api_secret");
   private final String AUTH_URL = "https://test.api.amadeus.com/v1/security/oauth2/token";
 
   private String accessToken;
