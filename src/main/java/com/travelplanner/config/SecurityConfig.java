@@ -35,7 +35,7 @@ public class SecurityConfig {
                 // Allow all preflight OPTIONS requests
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 // Allow public endpoints
-                .requestMatchers("/auth/**", "/otp/**", "/oauth2/**").permitAll()
+                .requestMatchers("/auth/**", "/otp/**", "/oauth2/**","/api/**").permitAll()               //-------
                 .requestMatchers("/api/generate-itinerary", "/api/itineraries").permitAll()
                 // All other requests require auth
                 .anyRequest().authenticated()
